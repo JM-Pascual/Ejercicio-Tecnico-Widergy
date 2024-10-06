@@ -31,8 +31,8 @@ Mirando únicamente el modelo, si se conoce el turno que tiene asignado un pacie
     - **Estudio** puede tener cero o muchos **Turnos** (0:N), pero todos los **Turnos** están asociados a un solo **Estudio** (1).
    
     A su vez, se podría identificar una entidad débil/secundaria **Franja Horaria** que se encargue de relacionar **Sucursal** con **Estudio**.
-    - **Sucursal** puede tener cero o muchas **Franjas Horarias** (0:N), pero todas las **Franjas Horarias** están asociadas a una sola **Sucursal** (1).
-    - **Estudio** puede tener cero o muchas **Franjas Horarias** (0:N), pero todas las **Franjas Horarias** están asociadas a un solo **Estudio** (1).
+    - **Sucursal** puede tener una o muchas **Franjas Horarias** (1:N), pero todas las **Franjas Horarias** están asociadas a una sola **Sucursal** (1).
+    - **Estudio** puede tener una o muchas **Franjas Horarias** (1:N), pero todas las **Franjas Horarias** están asociadas a un solo **Estudio** (1).
 4. Sí, podría haber más de un turno en un mismo rango horario.
   Por eso es importante tener un atributo (columna) que permita identificar para un determinado estudio en una determinada franja horaria cuantos turnos se pueden asignar.
 5. En primera instancia no hay lógica a nivel Base de Datos o relación entre entidades que **No** permita a un usuario registrarse en más de un turno en el mismo horario (En diferentes o la misma sucursal), ya que un paciente puede estar asociado a varios turnos.
